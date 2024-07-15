@@ -31,7 +31,7 @@ Applications that use Symfony Flex
 Open a command console, enter your project directory and execute:
 
 ```console
-composer require amine-lejmi/messenger-make
+composer require amine-lejmi/messenger-maker
 ```
 
 Applications that don't use Symfony Flex
@@ -43,7 +43,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-composer require amine-lejmi/messenger-make
+composer require amine-lejmi/messenger-maker
 ```
 
 ### Step 2: Enable the Bundle
@@ -106,6 +106,21 @@ $ php bin/console make:messenger:command SendEmailCommand
   [2] high-priority
  > 
 ```
+**Note:** After choosing a transport, the bundle will automatically
+register the message in routing section inside
+`config/packages/messenger.yaml`
+
+```yaml
+framework:
+  # ...
+  messenger:
+    # ...
+    routing:
+        # ...
+        App\Messenger\Command\SendEmailCommand: low-priority
+        # ...
+```
+
 2. To add Any additional inputs required for the specific message
 
 ```shell

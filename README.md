@@ -106,6 +106,21 @@ $ php bin/console make:messenger:command SendEmailCommand
   [2] high-priority
  > 
 ```
+**Note:** After choosing a transport, the bundle will automatically
+register the message in routing section inside 
+`config/packages/messenger.yaml`
+
+```yaml
+framework:
+  # ...
+  messenger:
+    # ...
+    routing:
+        # ...
+        App\Messenger\Command\SendEmailCommand: low-priority
+        # ...
+```
+
 2. To add Any additional inputs required for the specific message
 
 ```shell
