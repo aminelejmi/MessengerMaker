@@ -1,0 +1,31 @@
+{
+  "name": "amine-lejmi/messenger-maker",
+  "description": "Separate and enhance the creation of symfony messenger queries, events and commands messages.",
+  "type": "symfony-bundle",
+  "keywords": [
+    "symfony",
+    "messenger",
+    "cqrs",
+    "make",
+    "console"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Amine LEJMI",
+      "email": "lejmi.amine@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.5",
+    "symfony/messenger": ">=5.0",
+    "symfony/maker-bundle": ">=1.40",
+    "symfony/console": ">=5.4",
+    "symfony/yaml": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "AmineLejmi\\MessengerMaker\\": "src/"
+    }
+  }
+}
