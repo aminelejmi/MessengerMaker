@@ -31,7 +31,7 @@ Applications that use Symfony Flex
 Open a command console, enter your project directory and execute:
 
 ```console
-composer require amine-lejmi/messenger-make
+composer require amine-lejmi/messenger-maker
 ```
 
 Applications that don't use Symfony Flex
@@ -43,7 +43,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-composer require amine-lejmi/messenger-make
+composer require amine-lejmi/messenger-maker
 ```
 
 ### Step 2: Enable the Bundle
