@@ -1,15 +1,4 @@
 services:
-  _instanceof:
-    AmineLejmi\MessengerMaker\Contract\CommandHandlerInterface:
-      tags:
-        - { name: messenger.message_handler, bus: command.bus }
-    AmineLejmi\MessengerMaker\Contract\EventHandlerInterface:
-      tags:
-        - { name: messenger.message_handler, bus: event.bus }
-    AmineLejmi\MessengerMaker\Contract\QueryHandlerInterface:
-      tags:
-        - { name: messenger.message_handler, bus: query.bus }
-
   AmineLejmi\MessengerMaker\Maker\MakeMessengerCommand:
     tags: [ 'maker.command' ]
     arguments:

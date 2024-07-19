@@ -59,6 +59,28 @@ return [
     AmineLejmi\MessengerMaker\MessengerMakerBundle::class => ['all' => true],
 ];
 ```
+After Installation
+============
+
+To use the provided interfaces for automatically registering messages 
+in their corresponding buses, 
+add the following lines to your config/services.yaml file:
+
+```yaml
+services:
+  # ...
+  _instanceof:
+    AmineLejmi\MessengerMaker\Contract\CommandHandlerInterface:
+      tags:
+        - { name: messenger.message_handler, bus: command.bus }
+    AmineLejmi\MessengerMaker\Contract\EventHandlerInterface:
+      tags:
+        - { name: messenger.message_handler, bus: event.bus }
+    AmineLejmi\MessengerMaker\Contract\QueryHandlerInterface:
+      tags:
+        - { name: messenger.message_handler, bus: query.bus }
+```
+**Note :** You can only add the interfaces you need in your project.
 
 Usage
 ============
